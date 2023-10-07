@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Wedding Photographers",
+    "img": "https://i.ibb.co/ggNSzsV/pexels-studio-negarin-3650469.jpg",
+    "thumb_img": "https://i.ibb.co/4StSZW7/couple-dancing-ther-wedding.jpg",
+    "price": "$5,000",
+    "details": "Our event management company offers a team of highly skilled and experienced wedding photographers who specialize in capturing the most precious moments of your special day.Our photographers have a creative and artistic eye, ensuring that your wedding photos are not just ordinary shots but pieces of art that tell your unique love story. We understand that every wedding is unique, and so are your photography needs. We offer customized photography packages to suit your preferences and budget.Our photographers use the latest and best photography equipment, ensuring high-quality, high-resolution images. We believe in planning every detail. Our photographers meet with you before the wedding to discuss your vision, preferred style, and must-have shots.We provide comprehensive coverage of your wedding day, capturing. Our photographers are skilled in post-production, ensuring that your photos are professionally edited and enhanced to perfection. We understand your excitement to see your wedding photos. We promise a timely delivery of your edited images.Our photographers are not only skilled but also friendly and professional, ensuring a comfortable and enjoyable photography experience.Your wedding photos are lifelong keepsakes. We ensure that you receive a stunning collection of images that you'll treasure for generations.In addition to photography, we can also provide videography services, creating a comprehensive multimedia record of your wedding.Whether you're having a local or destination wedding, our photographers are experienced in capturing the magic of weddings in various settings.Don't just take our word for it; read what our satisfied clients have to say about our wedding photography services."
+  },
+  {
+    "id": 2,
+    "title": "Makeup Artists",
+    "img": "https://i.ibb.co/Krc7jwX/pexels-aalma-usman-13066341.jpg",
+    "thumb_img": "https://i.ibb.co/YPjNW5t/i-m-so-happy-from-my-birthday-party.jpg",
+    "price": "$1,000",
+    "details":"we understand the importance of flawless makeup on your special day. Our team of highly skilled makeup artists is dedicated to enhancing your natural beauty, ensuring you look and feel your best for any event.Our makeup artists are more than just professionals; they are artists who use faces as their canvas. With years of experience and a passion for makeup, they are well-versed in creating a wide range of looks, from classic and elegant to bold and avant-garde. We tailor each makeup application to suit your unique style, personality, and the event's theme.Whether you're preparing for a wedding, a corporate event, a fashion show, or a photoshoot, our makeup artists have the expertise to adapt to your specific needs. We offer a comprehensive range of makeup services, including.We use only high-quality, industry-standard makeup products to ensure a flawless finish that lasts throughout your event. Our makeup artists stay updated with the latest makeup trends and techniques, guaranteeing you a modern and fashionable look."
+  },
+  {
+    "id": 3,
+    "title": "The Wedding Art",
+    "img": "https://i.ibb.co/ZJzX7b5/pexels-jonathan-borba-9703865.jpg",
+    "thumb_img": "https://i.ibb.co/yynF93M/pexels-luke-barky-2899737.jpg",
+    "price": "$3,000",
+    "details":"At The Wedding Art, we specialize in crafting unforgettable wedding experiences that are a true work of art. We understand that your wedding day is a masterpiece in the making, and we are here to paint it with love, creativity, and meticulous attention to detailEvery love story is unique, and we believe your wedding should reflect that uniqueness. The Wedding Art is not just about planning weddings; it's about curating moments that tell your story. We blend artistry, innovation, and heartfelt emotions to design weddings that are as exceptional as the love you share.The Wedding Art is not just a company; it's a passion. We infuse every wedding with creativity, elegance, and an artistic touch that sets us apart. With a commitment to excellence and a love for the art of weddings, we create events that are both visually stunning and emotionally resonant.Your wedding is a canvas waiting to be filled with vibrant colors and heartfelt emotions. At The Wedding Art,we invite you to be a part of the creative process as we work together to turn your dream wedding into a masterpiece. Connect with us today, and let's embark on this artistic journey of love."
+  },
+  {
+    "id": 4,
+    "title": "Wedding Cake",
+    "img": "https://i.ibb.co/PGLfy8b/pexels-brent-keane-1702373.jpg",
+    "thumb_img": "https://yourwebsite.com/images/engagement_thumb.jpg",
+    "price": "$2,000",
+    "details":"Wedding Cake A Sweet Symbol of Your Love Story Your wedding day is a celebration of love, and every celebration deserves a touch of sweetness. At [Your Bakery or Wedding Services Name], we understand that your wedding cake isn't just dessert; it's a work of art that reflects your unique love story.Our talented bakers and cake designers are dedicated to crafting wedding cakes that are as exquisite as they are delicious. With attention to detail, precision, and a passion for baking, we create cakes that leave a lasting impression on both your palate and your heart.No two love stories are the same, and neither should be your wedding cake. We work closely with you to design a cake that perfectly complements your wedding theme, color scheme, and style. Whether you envision a classic, modern, whimsical, or Our wedding cakes not only look stunning but also taste divine. Choose from a variety of mouthwatering flavors, fillings, and frostings to create a cake that tantalizes your taste buds. From classic vanilla to decadent chocolate, we have options to suit every palate."
+  },
+  {
+    "id": 5,
+    "title": "Surprise Party",
+    "img": "https://i.ibb.co/4StSZW7/couple-dancing-ther-wedding.jpg",
+    "thumb_img": "https://yourwebsite.com/images/retirement_thumb.jpg",
+    "price": "$1,500",
+    "details":"Surprise parties are more than just celebrations; they are a delightful symphony of secrecy, anticipation, and pure joy. At [Your Event Planning Name], we specialize in curating surprise parties that leave lasting impressions and bring smiles to the faces of both guests and honorees alike.There's something truly magical about surprising a loved one. It's that moment when their eyes light up, and their heart skips a beat as they walk into a room filled with the people who mean the most to them. We believe in capturing that magic and turning it into unforgettable memories.With years of experience in event planning, we have mastered the art of surprise. From birthdays and anniversaries to milestone achievements and engagements, we've orchestrated surprise parties for various occasions. We understand that each event is unique and work closely with you to tailor the surprise to fit the personality and preferences of the guest of honor."
+  },
+  {
+    "id": 6,
+    "title": "Engagement Party",
+    "img": "https://i.ibb.co/zVZ6cnh/pexels-natasha-fernandez-1067563.jpg",
+    "thumb_img": "https://yourwebsite.com/images/baby_shower_thumb.jpg",
+    "price": "$800",
+    "details":"An engagement is a beautiful beginning—a promise of love, commitment, and a lifetime together. The engagement party is the perfect occasion to celebrate this journey with family and friends. At [Your Event Planning Name], we understand the significance of this milestone, and we specialize in creating engagement parties that are filled with love, laughter, and cherished moments.An engagement party is more than just a social gathering; it's a heartfelt celebration of love and the decision to spend a lifetime together. It's an opportunity for the couple to share their happiness and excitement with their closest friends and family members.We believe that every engagement is unique, and so should be your engagement party. Our dedicated team works closely with you to create a personalized celebration that reflects your love story, personalities, and preferences. Whether you envision an intimate gathering, a grand soirée, or a themed celebration, we bring your vision to life.the right venue and decor is essential to set the tone for your engagement party. We offer a wide range of venue options and can transform any space into a romantic and inviting atmosphere. Our decor experts can tailor the decorations to your chosen theme or style, ensuring every detail is picture-perfect."
+  }
+]
