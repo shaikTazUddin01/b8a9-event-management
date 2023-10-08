@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { createContext } from 'react';
+import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import app from '../FireBase/FireBase.config'
 
-const AuthProvider = () => {
-    
+export const AuthContext = createContext(null);
+
+const AuthProvider = ({ children }) => {
+    const auth = getAuth(app)
+
+    const AuthInFo="taz"
     return (
-        <div>
-            
-        </div>
+        <AuthContext.Provider value={AuthInFo}>
+            {children}
+        </AuthContext.Provider>
     );
 };
 
