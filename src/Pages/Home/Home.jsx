@@ -31,11 +31,11 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* <div className='my-20'>
+                <div className='my-20'>
                     <h1 className='text-4xl font-bold pb-2 text-center' >Why Choose Us</h1>
                     <div className='seviceHeader mx-auto block h-[3px] w-[20%] md:w-[10%] bg-[#FF325E]'></div>
                     <Whyus></Whyus>
-                </div> */}
+                </div>
             </div>
         </div>
     );
