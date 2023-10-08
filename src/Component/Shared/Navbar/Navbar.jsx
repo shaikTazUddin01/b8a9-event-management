@@ -2,12 +2,12 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
-import userImg from '../../../assets/user.png'
+import userImg from '../../../assets/user.png';
 
 const Navbar = () => {
     const { user, handleSignOut } = useContext(AuthContext);
 
-    console.log(user?.displayName)
+    // console.log(user?.displayName)
     const handleLogOut = () => {
         handleSignOut()
             .then(() => {
@@ -27,7 +27,7 @@ const Navbar = () => {
                         <li onClick={handleLogOut}><Link>LogOut</Link></li>
                         <div className='flex flex-col justify-center items-center'>
                             <img src={user.photoURL ? user?.photoURL : userImg} alt="" className='w-10 h-10 rounded-full' />
-                            <h1 className='hidden hover:relative'>{user?.displayName}</h1>
+                            <h1 className=''>{user?.displayName}</h1>
                         </div>
                     </>
                     :
@@ -51,10 +51,17 @@ const Navbar = () => {
                             {NavItem}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <Link to={'/'}>
+                       {/* <h1 className='text-xl font-bold'>LOGO</h1> */}
+                       <div className='flex gap-2 items-center'>
+                       <img src="/vite.svg" alt="" />
+                       <span className='font-bold text-xl'>LOGO</span>
+                
+                       </div>
+                       </Link>
                 </div>
-                <div className="navbar-end hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                <div className="navbar-end hidden lg:flex ">
+                    <ul className="menu menu-horizontal px-1 lg:flex items-center">
                         {NavItem}
                     </ul>
                 </div>

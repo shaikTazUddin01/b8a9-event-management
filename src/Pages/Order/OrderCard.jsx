@@ -24,8 +24,8 @@ const OrderCard = ({ order }) => {
                             </h4>
                             <h2 className='text-lg font-semibold text-[#636262]'>{price}</h2>
                             <p className="mb-8 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
-                                {details.slice(0, 200)}...
-                        <Link to={`/eventDetails/${id}`}> <button className='text-[#FF325E]'>see more</button></Link>
+                                {details.slice(0, 200)}
+                        <Link to={`/eventDetails/${id}`}> <button className='text-[#FF325E]'>see more...</button></Link>
                             </p>
                         </div>
                     </div>

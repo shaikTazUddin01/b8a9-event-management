@@ -1,12 +1,15 @@
 import { FcGoogle } from 'react-icons/fc'
 import loginImg from '../../assets/secondaryImg.jpg'
 // import { AiFillGithub } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 const Login = () => {
-
+   
+    const location=useLocation()
+    const navigate=useNavigate()
+    console.log(location.state)
     const { handleSignIn ,handleGoogleSignIn} = useContext(AuthContext)
 
     const handleLogin = (e) => {
@@ -14,15 +17,17 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value
 
-        console.log(email, password)
+        // console.log(email, password)
 
         handleSignIn(email,password)
         .then((res)=>{
             toast.success("successfully Login")
+            navigate(location?.state ? location.state : '/')
+            
         })
         .catch(error=>{
-            toast.error(error.message)
-            console.log(error)
+            toast.error("Your Email or Password doesn't match ") 
+           
         })
     }
 
@@ -30,6 +35,8 @@ const Login = () => {
         handleGoogleSignIn()
         .then(result=>{
             toast.success("successfully login")
+            navigate(location?.state ? location.state : '/')
+
         })
         .catch(err=>{
             toast.error(err.message)

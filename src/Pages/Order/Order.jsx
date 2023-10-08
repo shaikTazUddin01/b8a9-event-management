@@ -9,7 +9,7 @@ const Order = () => {
 
     }, [])
 
-    console.log(orders)
+    // console.log(orders)
 
     return (
         <div>

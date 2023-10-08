@@ -1,11 +1,12 @@
 import { useContext } from 'react';
 import loginImg from '../../assets/secondaryImg.jpg'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from '../../Provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
-import {  updateProfile } from 'firebase/auth';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
+    const navigate=useNavigate()
     const { handleSignUp } = useContext(AuthContext)
     const handleRegister = (e) => {
         e.preventDefault()
@@ -14,28 +15,53 @@ const Register = () => {
         const photoUrl = e.target.photoUrl.value
         const password = e.target.password.value
 
-        handleSignUp(email, password)
-            .then((res) => {
+        const passUpperCase = /[A-Z]/;
+        const passSpecial = /[!@#\$%\^&\*_]/;
+        // const pass6Char=/^.{7,}$/;
 
-                updateProfile(res.user, {
-                    displayName: name, 
-                    photoURL: photoUrl
-                }).then(() => {
-                    // Profile updated!
-                    // ...
-                }).catch((error) => {
-                    // An error occurred
-                    // ...
-                })
-                toast.success("SignUp Success")
+        // if (pass6Char) {
+        if (passUpperCase.test(password)) {
+            if (passSpecial.test(password)) {
 
-            })
-            .catch((error) => {
 
-                const errorMessage = error.message;
-                toast.error(errorMessage)
+                handleSignUp(email, password)
+                    .then((res) => {
 
-            })
+                        updateProfile(res.user, {
+                            displayName: name,
+                            photoURL: photoUrl
+                        }).then(() => {
+                            // Profile updated!
+                            // ...
+                        }).catch((error) => {
+                            // An error occurred
+                            // ...
+                        })
+                        toast.success("SignUp Success")
+                        e.target.reset()
+                        navigate('/')
+
+                    })
+                    .catch((error) => {
+
+                        const errorMessage = error.message;
+                        toast.error(errorMessage)
+
+                    })
+
+
+            } else {
+                toast.error('Your password must contain at least special char from -[ ! @ # $ % ^ & * _ ]')
+
+            }
+        } else {
+            toast.error('Your password must contain at least one upper case letter.')
+        }
+    // }else{
+    //     toast.error('Your password must be at least 6 characters')
+
+    // }
+
     }
 
     return (
