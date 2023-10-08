@@ -4,17 +4,36 @@ import loginImg from '../../assets/secondaryImg.jpg'
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
-
+import { ToastContainer, toast } from 'react-toastify';
 const Login = () => {
 
-    const {name}=useContext(AuthContext)
+    const { handleSignIn ,handleGoogleSignIn} = useContext(AuthContext)
 
-    const handleLogin=(e)=>{
+    const handleLogin = (e) => {
         e.preventDefault()
-        const email=e.target.email.value;
-        const password=e.target.password.value
+        const email = e.target.email.value;
+        const password = e.target.password.value
 
-        console.log(email,password)
+        console.log(email, password)
+
+        handleSignIn(email,password)
+        .then((res)=>{
+            toast.success("successfully Login")
+        })
+        .catch(error=>{
+            toast.error(error.message)
+            console.log(error)
+        })
+    }
+
+    const handleGoogleLogIN=()=>{
+        handleGoogleSignIn()
+        .then(result=>{
+            toast.success("successfully login")
+        })
+        .catch(err=>{
+            toast.error(err.message)
+        })
     }
 
     console.log(name)
@@ -54,7 +73,7 @@ const Login = () => {
                                     <div className='h-[1px] w-[50px] bg-[#FF325E]'></div>
                                 </div>
                                 <div className='mb-3 mt-2'>
-                                    <div className='flex justify-center items-center border mx-10 rounded-lg py-2 gap-2'>
+                                    <div className='flex justify-center items-center border mx-10 rounded-lg py-2 gap-2' onClick={handleGoogleLogIN}>
                                         <FcGoogle className='text-2xl'></FcGoogle>
                                         <p className='font-bold'>Log In With Google</p>
                                     </div>
@@ -69,6 +88,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

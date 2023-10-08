@@ -6,6 +6,7 @@ import EventDetails from "../Pages/EventDetails/EventDetails";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Order from "../Pages/Order/Order";
+import PrivateRouter from "./PrivateRouter";
 
 
 
@@ -22,7 +23,7 @@ const Router =  createBrowserRouter([
             },
             {
                 path:'/eventDetails/:id',
-                element:<EventDetails></EventDetails>,
+                element:<PrivateRouter><EventDetails></EventDetails></PrivateRouter>,
                 loader:()=>fetch('/eventItem.json')
             },
             {
@@ -35,7 +36,7 @@ const Router =  createBrowserRouter([
             },
             {
                 path:'/order',
-                element:<Order></Order>
+                element:<PrivateRouter><Order></Order></PrivateRouter>
             }
         ]
     }

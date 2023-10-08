@@ -3,17 +3,39 @@ import loginImg from '../../assets/secondaryImg.jpg'
 import { Link } from "react-router-dom";
 import { AuthContext } from '../../Provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
+import {  updateProfile } from 'firebase/auth';
 
 const Register = () => {
-   const{handleSignUp}=useContext(AuthContext)
-    const handleRegister=(e)=>{
+    const { handleSignUp } = useContext(AuthContext)
+    const handleRegister = (e) => {
         e.preventDefault()
-        const name=e.target.name.value
-        const email=e.target.email.value;
-        const photoUrl=e.target.photoUrl.value
-        const password=e.target.password.value
+        const name = e.target.name.value
+        const email = e.target.email.value;
+        const photoUrl = e.target.photoUrl.value
+        const password = e.target.password.value
 
-        
+        handleSignUp(email, password)
+            .then((res) => {
+
+                updateProfile(res.user, {
+                    displayName: name, 
+                    photoURL: photoUrl
+                }).then(() => {
+                    // Profile updated!
+                    // ...
+                }).catch((error) => {
+                    // An error occurred
+                    // ...
+                })
+                toast.success("SignUp Success")
+
+            })
+            .catch((error) => {
+
+                const errorMessage = error.message;
+                toast.error(errorMessage)
+
+            })
     }
 
     return (
