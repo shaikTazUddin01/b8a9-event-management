@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+
+
+
+
+
     return (
         <div>
             {/* <footer className="footer footer-center p-10 bg-[#FF325E] text-primary-content"> */}
@@ -9,12 +14,12 @@ const Footer = () => {
             {/* </footer> */}
 
             <footer className="footer footer-center p-10 bg-[#FF325E] text-white  rounded">
-                <nav className="grid grid-flow-col gap-4">
+                <nav className="grid grid-flow-col gap-4 uppercase">
                     <Link to={'/'} className='link link-hover text-[16px]'>Home</Link>
-                    <Link to={'/'} className='link link-hover text-[16px]'>About</Link>
-                    <Link to={'/'} className='link link-hover text-[16px]'>contact</Link>
-                    <Link to={'/login'} className='link link-hover text-[16px]'>Login</Link>
-                   
+                    <Link to={'/order'} className='link link-hover text-[16px]'>My Order</Link>
+                    <Link to={'/contact'} className='link link-hover text-[16px]'>contact Us</Link>
+                    {/* <Link to={'/login'} className='link link-hover text-[16px]'>Login</Link> */}
+
                 </nav>
                 <nav>
                     <div className="grid grid-flow-col gap-4">

@@ -1,24 +1,37 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import './home.css'
 import { useLoaderData } from 'react-router-dom';
 import EventCard from '../../Component/Home/eventCard';
 import CustomerSection from '../../Component/Home/CustomerSection';
 import Whyus from '../../Component/Home/Whyus';
 import CarouselBanner from '../../Component/Banner/CarouselBanner';
+// import aos animation
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { AuthContext } from '../../Provider/AuthProvider';
 const Home = () => {
     const events = useLoaderData()
 
+    const {loader}=useContext(AuthContext)
+
     useEffect(()=>{
         AOS.init({
-            duration:2000,
+            duration:3000,
           });
 
     },[])
 
+     if (loader) {
+         return (
+            <div className='min-h-[90vh] flex justify-center'>
+            <span className="loading loading-spinner loading-lg"></span>
+        </div>
+         )
+     }
+     
     return (
         <div>
+ 
             <CarouselBanner></CarouselBanner>
             <div className='max-w-7xl mx-auto' data-aos="fade-up">
                 <div className=' my-20'>

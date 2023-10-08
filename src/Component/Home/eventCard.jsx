@@ -1,10 +1,21 @@
+import { useContext } from 'react';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 
 const EventCard = ({ event }) => {
     const { id, title, img, thumb_img, price, details } = event;
 
+    // const {loader}=useContext(AuthContext)
+
+    // if (loader) {
+    //     return (
+    //        <div className='min-h-[90vh] flex justify-center'>
+    //        <span className="loading loading-spinner loading-lg"></span>
+    //    </div>
+    //     )
+    // }
 
     return (
         <div className='mt-10'>

@@ -1,16 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 
 const OrderCard = ({ order }) => {
     const { id,img, title, details, price } = order
 
 
     return (
-
+        // data-aos="fade-up"
         <div >
-        {/*  */}
-                
-                    <div className="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg hover:shadow-xl hover:shadow-[#FF325E]">
+                    <div className="relative flex w-full max-w-[48rem] flex-row rounded-xl
+                     bg-white bg-clip-border text-gray-700 shadow-lg hover:shadow-xl 
+                     hover:shadow-[#FF325E]" >
                         <div className="relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
                             <img
                                 src={img}

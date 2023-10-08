@@ -57,7 +57,7 @@ const CarouselBanner = () => {
                                 <div className='bg-[#242424a1] min-h-[500px] flex flex-col items-center justify-center p-5'>
                                     <div className="max-w-7xl mx-auto" >
                                         <h1 className='text-center text-4xl md:text-6xl font-semibold text-white p-5'>{slider.title}</h1>
-                                        <div className="w-full flex justify-center mt-10" data-aos="zoom-in">
+                                        <div className="w-full flex justify-center mt-10" >
                                             <input type="text" placeholder="Search Here...." className="p-3 rounded-l-xl w-2/3 md:w-2/4" />
                                             <button className="py-3 px-6 rounded-r-xl bg-[#FF325E] text-white font-bold">Search</button>
                                         </div>
