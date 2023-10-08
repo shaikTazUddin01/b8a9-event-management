@@ -10,6 +10,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/effect-fade';
+
 // aos animation
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -24,9 +25,6 @@ const CarouselBanner = () => {
             .then(res => res.json())
             .then(data => setSliders(data))
 
-            // AOS.init({
-            //     duration:500,
-            //   });
     }, [])
 
     // useEffect(()=>{

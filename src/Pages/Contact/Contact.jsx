@@ -12,14 +12,14 @@ const Contact = () => {
 
                 <div className='w-full md:w-2/4 ' >
                     <h1 className='text-4xl font-semibold mb-2'>contact Us</h1>
-                    <div className='seviceHeader block h-[3px] w-[20%] md:w-[15%] bg-[#FF325E] mb-10'></div>
+                    <div className='seviceHeader block h-[3px] w-[30%] md:w-[15%] bg-[#FF325E] mb-10'></div>
                     <h3 className='text-xl md:text-2xl mb-3 font-semibold'>Rawhah Event Management company</h3>
                     <address className='text-xl md:text-2xl font-semibold mb-3'>Address : <span className='text-lg md:text-xl font-medium text-[#636363]'> 04,Poschim Bania Khamar Cross Road; BosuPara PS, Khulna – 9100, Bangladesh</span></address>
                     <p className='text-xl md:text-2xl font-semibold mb-3'>Phone : <span className='text-lg md:text-xl  font-medium text-[#636363]'>+880 1834 957677</span></p>
                     <p className='text-xl md:text-2xl font-semibold mb-3'>Email : <span className='text-lg md:text-xl font-medium text-[#636363] '>tazahmedsoft@gmail.com</span></p>
                 </div>
 
-                <div className='w-full md:w-2/4 mt-10 md:mt-0 '>
+                <div className='w-full md:w-2/4 my-10 md:my-0 '>
                     <div className="w-full shadow-2xl hover:shadow-xl shadow-[#FF325E]  hover:shadow-[#FF325E] rounded-lg bg-base-100">
                         <form className="card-body">
                             <div className="form-control">

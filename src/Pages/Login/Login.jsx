@@ -66,11 +66,11 @@ const Login = () => {
                                             <span className="label-text font-bold">Password</span>
                                         </label>
                                         <input type="password" placeholder="password" className="input input-bordered " name='password' required />
-                                        <label className="label">
+                                        {/* <label className="label">
                                             <a href="#" className="label-text-alt link link-hover font-bold">Forgot password?</a>
-                                        </label>
+                                        </label> */}
                                     </div>
-                                    <div className="form-control ">
+                                    <div className="form-control mt-2">
                                         <button className="text-white py-3 rounded-lg text-lg font-bold bg-[#FF325E]" type='submit'>Login</button>
                                     </div>
                                 </form>

@@ -15,7 +15,9 @@ const Order = () => {
         <div>
             {
                 orders ?
-                  <div className='min-h-[90vh] max-w-7xl mx-auto my-20 grid grid-cols-1 gap-8 md:grid-cols-2'>
+                  <div className='min-h-[90vh] max-w-7xl 
+                  mx-auto my-20 grid grid-cols-1 gap-8 
+                  lg:grid-cols-2 px-5 md:px-0'>
                     
                     {orders?.map(order => <OrderCard key={order.id} order={order}></OrderCard>)}
                     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Whyus = () => {
     return (
-        <div className='px-5 md:px-0  grid grid-cols-1 md:grid-cols-2 gap-5 items-center mt-16 mb-20'>
+        <div className='px-5 md:px-10  grid grid-cols-1 lg:px-0 lg:grid-cols-2 gap-5 items-center mt-10 mb-20'>
             <div className=''>
                 <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" />
             </div>
