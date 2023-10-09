@@ -2,16 +2,13 @@ import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
-// import userImg from '../../../assets/user.png';
+
 
 const Navbar = () => {
     const { user, handleSignOut } = useContext(AuthContext);
     // const {userlogo,setuseLogo}=useState(userImg)
 
-
-    // user?.photoURL && setuseLogo(user?.photoURL)
-    console.log(user)
-    console.log(user?.displayName)
+    const [open,setopen]=useState(false)
     const handleLogOut = () => {
         handleSignOut()
             .then(() => {
@@ -29,9 +26,23 @@ const Navbar = () => {
                 user ?
                     <>
                         <li onClick={handleLogOut}><Link>LogOut</Link></li>
-                        <div className='flex flex-col justify-center items-center'>
-                            <img src={user?.photoURL ? user.photoURL : ""} alt="" className='w-10 h-10 rounded-full' />
-                            <h1 className=''>{user?.displayName && user.displayName}</h1>
+                        <div className='flex flex-col lg:justify-center lg:items-center px-5 lg:px-0'>
+                            <img src={user?.photoURL ? user.photoURL : ""} alt="" className='w-10 h-10 rounded-full'  onClick={()=>setopen(!open)}/>
+
+                        {
+                            open=== true ?
+                            <div className='text-white bg-black p-4 mt-10 lg:mt-32
+                             rounded-md z-20 ml-8 lg:ml-0 lg:mr-40  absolute
+                            text-center '>
+                                <h1 className='' >{user?.displayName && user.displayName}</h1>
+                                <h1 className='lowercase' >{user?.email && user.email}</h1>
+                            </div>
+                            :
+                            <div className='hidden absolute font-medium'>
+                            <h1 className='' >{user?.displayName && user.displayName}</h1>
+                            <h1 className='' >{user?.email && user.email}</h1>
+                        </div>
+                        }
                         </div>
                     </>
                     :
