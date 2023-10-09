@@ -7,15 +7,6 @@ import { AuthContext } from '../../Provider/AuthProvider';
 const EventCard = ({ event }) => {
     const { id, title, img, thumb_img, price, details } = event;
 
-    // const {loader}=useContext(AuthContext)
-
-    // if (loader) {
-    //     return (
-    //        <div className='min-h-[90vh] flex justify-center'>
-    //        <span className="loading loading-spinner loading-lg"></span>
-    //    </div>
-    //     )
-    // }
 
     return (
         <div className='mt-10'>
@@ -28,7 +19,7 @@ const EventCard = ({ event }) => {
                     />
                 </div>
                 <div className="p-6">
-                    <div className='flex justify-between'>
+                    <div className='flex justify-between items-center'>
                         <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                             {title}
                         </h5>

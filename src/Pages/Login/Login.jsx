@@ -6,11 +6,11 @@ import { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 const Login = () => {
-   
-    const location=useLocation()
-    const navigate=useNavigate()
+
+    const location = useLocation()
+    const navigate = useNavigate()
     console.log(location.state)
-    const { handleSignIn ,handleGoogleSignIn} = useContext(AuthContext)
+    const { handleSignIn, handleGoogleSignIn } = useContext(AuthContext)
 
     const handleLogin = (e) => {
         e.preventDefault()
@@ -19,35 +19,35 @@ const Login = () => {
 
         // console.log(email, password)
 
-        handleSignIn(email,password)
-        .then((res)=>{
-            toast.success("successfully Login")
-            navigate(location?.state ? location.state : '/')
-            
-        })
-        .catch(error=>{
-            toast.error("Your Email or Password doesn't match ") 
-           
-        })
+        handleSignIn(email, password)
+            .then((res) => {
+                toast.success("successfully Login")
+                navigate(location?.state ? location.state : '/')
+
+            })
+            .catch(error => {
+                toast.error("Your Email or Password doesn't match ")
+
+            })
     }
 
-    const handleGoogleLogIN=()=>{
+    const handleGoogleLogIN = () => {
         handleGoogleSignIn()
-        .then(result=>{
-            toast.success("successfully login")
-            navigate(location?.state ? location.state : '/')
+            .then(result => {
+                toast.success("successfully login")
+                navigate(location?.state ? location.state : '/')
 
-        })
-        .catch(err=>{
-            toast.error(err.message)
-        })
+            })
+            .catch(err => {
+                toast.error(err.message)
+            })
     }
 
     console.log(name)
     return (
         <div style={{ backgroundImage: `url(${loginImg})` }} className='bg-cover'>
             <div className='mx-auto bg-[#0c0c0c4f]' >
-                <div className=" min-h-screen pt-[2%]">
+                <div className=" min-h-screen py-10">
                     <div className="hero-content flex-col ">
                         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-[#ffffff9d] ">
                             <div className='rounded-2xl'>
@@ -80,7 +80,7 @@ const Login = () => {
                                     <div className='h-[1px] w-[50px] bg-[#FF325E]'></div>
                                 </div>
                                 <div className='mb-3 mt-2'>
-                                    <div className='flex justify-center items-center border mx-10 rounded-lg py-2 gap-2' onClick={handleGoogleLogIN}>
+                                    <div className='flex justify-center items-center border mx-9 rounded-lg py-2 gap-2' onClick={handleGoogleLogIN}>
                                         <FcGoogle className='text-2xl'></FcGoogle>
                                         <p className='font-bold'>Log In With Google</p>
                                     </div>

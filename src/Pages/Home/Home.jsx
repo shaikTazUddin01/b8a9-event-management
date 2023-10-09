@@ -35,7 +35,7 @@ const Home = () => {
             <CarouselBanner></CarouselBanner>
             <div className='max-w-7xl mx-auto' data-aos="fade-up">
                 <div className='my-20'>
-                    <h1 className='text-4xl font-bold pb-2 text-center mb-2' >Our services</h1>
+                    <h1 className='text-4xl font-bold pb-2 text-center mb-1' >Our Services</h1>
                     <div className='seviceHeader mx-auto block h-[3px] w-[20%] md:w-[10%] bg-[#FF325E]'></div>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 md:mt-0 gap-8 p-5'>
                         {

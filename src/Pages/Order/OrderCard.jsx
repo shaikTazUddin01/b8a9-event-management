@@ -15,7 +15,7 @@ const OrderCard = ({ order }) => {
                      bg-white bg-clip-border
                       text-gray-700 shadow-lg shadow-[#FF325E]
                        hover:shadow-xl mx-auto
-                     hover:shadow-[#FF325E] mt-5 md:mt-0 p-5">
+                     hover:shadow-[#FF325E] mt-5 md:mt-0 p-5 md:mb-10 lg:mb-5">
                 <div className="relative m-0 lg:w-2/5 shrink-0 overflow-hidden rounded-t-xl md:rounded-xl lg:rounded-r-none bg-white bg-clip-border text-gray-700">
                     <img
                         src={img}

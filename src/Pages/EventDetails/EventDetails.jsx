@@ -27,7 +27,7 @@ const EventDetails = () => {
             const isExist = newGetEventItem.find(item => item.id === idInt)
             if (!isExist) {
                 localStorage.setItem("event", JSON.stringify([...newGetEventItem, eventDetails]))
-                toast("SuccessFully You add a New Order")
+                toast.success("SuccessFully You Add a New Order")
             } else {
                 toast.error("Already Ordered This Service")
             }

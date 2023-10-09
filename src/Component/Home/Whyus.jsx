@@ -1,13 +1,13 @@
-import React from 'react';
+import whyUs from '../../assets/whyUs.jpg'
 
 const Whyus = () => {
     return (
         <div className='px-5 md:px-10  grid grid-cols-1 lg:px-0 lg:grid-cols-2 gap-5 items-center mt-10 mb-20'>
             <div className=''>
-                <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" />
+                <img src={whyUs} alt="img" className='rounded-xl   shadow-xl shadow-[#FF325E]'/>
             </div>
             <div>
-                <p className='space-y-5'>
+                <p className='space-y-5 mt-5 md:mt-0'>
                     <span className='font-bold text-lg '>Certainly, here are some details for a "Why Choose Us" section that you can use for your event management company:</span>
                     <ul className='space-y-5'>
                         <li>

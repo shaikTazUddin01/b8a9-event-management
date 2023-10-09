@@ -12,7 +12,7 @@ const Navbar = () => {
     const handleLogOut = () => {
         handleSignOut()
             .then(() => {
-                toast.success("SuccessFully You LogOut")
+                toast.warning("SuccessFully You LogOut")
             })
             .catch()
     }
@@ -27,13 +27,16 @@ const Navbar = () => {
                     <>
                         <li onClick={handleLogOut}><Link>LogOut</Link></li>
                         <div className='flex flex-col lg:justify-center lg:items-center px-5 lg:px-0'>
-                            <img src={user?.photoURL ? user.photoURL : ""} alt="" className='w-10 h-10 rounded-full'  onClick={()=>setopen(!open)}/>
+                        <abbr title="Click here to see profile">
+                            <img src={user?.photoURL ? user.photoURL : ""} alt="img" className='w-10 h-10 border rounded-full' 
+                             onClick={()=>setopen(!open)}/>
+                        </abbr>
 
                         {
                             open=== true ?
-                            <div className='text-white bg-black p-4 mt-10 lg:mt-32
+                            <div className='text-white border border-[#FFFFF] bg-[#2b2b2b] p-4 mt-10 lg:mt-32
                              rounded-md z-20 ml-8 lg:ml-0 lg:mr-40  absolute
-                            text-center '>
+                            text-center shadow-lg shadow-[#FF325E]'>
                                 <h1 className='' >{user?.displayName && user.displayName}</h1>
                                 <h1 className='lowercase' >{user?.email && user.email}</h1>
                             </div>
